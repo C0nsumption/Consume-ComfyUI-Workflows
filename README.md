@@ -4,6 +4,7 @@ This repository contains a collection of `.json` and `.png` files, each represen
 ## Table of Contents
 1. [How To Use](#getting-started)
 2. [Workflow List](#workflow-list)
+3. [Basic First to Last frame interpolation](#frame-interpolation)
 
 
 ## Getting Started
