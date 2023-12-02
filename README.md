@@ -27,6 +27,10 @@ To install the manager simply:
 Here is a list of the available workflows:
 
 ### Frame Interpolation
+![Basic SDXL Turbo With Refiner Pass Output](./assets/sdxl_w_refiner/00/output.gif)
+- [Basic SDXL Turbo With Refiner Pass](./assets/sdxl_w_refiner/00/basic_turbo_w_refiner.json) - This workflow is a basic introduction to blending between two different frames. This will be expanded on heavily but to get everyone started, I am beginning with this basic yet extremely powerful workflow. 
+
+### Frame Interpolation
 ![Basic Frame Interpolation Output](./assets/frame_interpolation/00/output.gif)
 - [Frame Interpolation Between Two Images](./assets/frame_interpolation/00/basic_first_last_interpolation.json) - This workflow is a basic introduction to blending between two different frames. This will be expanded on heavily but to get everyone started, I am beginning with this basic yet extremely powerful workflow. 
 
