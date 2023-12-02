@@ -5,7 +5,7 @@ This repository contains a collection of `.json` and `.png` files, each represen
 1. [How To Use](#getting-started)
 2. [Workflow List](#workflow-list)
 3. [SDXL Turbo to SD1.5 Refiner](#sdxl-turbo-to-sd15-refiner)
-4. [Basic First to Last frame interpolation](#frame-interpolation)
+4. [Basic First to Last frame interpolation](#first-to-last-frame-interpolation)
 
 
 ## Getting Started
