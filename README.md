@@ -36,7 +36,7 @@ Here is a list of the available workflows:
 <br>
 <br>
 
-## Frame Interpolation
+## First to Last Frame Interpolation
 <p align="center">
   <img src="./assets/frame_interpolation/00/output.gif" alt="Basic Frame Interpolation Output" width="50%">
 </p>
