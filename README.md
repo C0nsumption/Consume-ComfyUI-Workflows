@@ -39,8 +39,12 @@ Here is a list of the available workflows:
 
 ## Frames to Video
 (Perfect for SDXL Turbo Outputs)
-![Basic SDXL Turbo With Refiner Pass Output](./assets/frames_to_video/00/output.gif)
-- [Basic SDXL Turbo With Refiner Pass](./assets/frames_to_video/00/frames_to_video.json) - This workflow can combine frames from a given directory into a video. I recommneded saving SDXL Turbo outputs to their own directory which can easily be passed into the load images node. There is a node in between loading images and actually combining them: `GMFSS Fortuna VFI` which is an interpolation node. It allows from frames to blend with one another in a smoother fashion. This can be deleted if the effect is not desired. There are also other interpolation models that can be used. The custom_node required to set this up can be found here:
+
+<p align="center">
+  <img src="./assets/frames_to_video/00/output.gif" alt="Basic Frame Interpolation Output" width="60%">
+</p>
+
+- [Frames to Video](./assets/frames_to_video/00/frames_to_video.json) - This workflow can combine frames from a given directory into a video. I recommneded saving SDXL Turbo outputs to their own directory which can easily be passed into the load images node. There is a node in between loading images and actually combining them: `GMFSS Fortuna VFI` which is an interpolation node. It allows from frames to blend with one another in a smoother fashion. This can be deleted if the effect is not desired. There are also other interpolation models that can be used. The custom_node required to set this up can be found here:
 
 `https://github.com/Fannovel16/ComfyUI-Frame-Interpolation`
 
@@ -65,7 +69,7 @@ For the full list, please reference the original repo.
 
 ## First to Last Frame Interpolation
 <p align="center">
-  <img src="./assets/frame_interpolation/00/output.gif" alt="Basic Frame Interpolation Output" width="50%">
+  <img src="./assets/frame_interpolation/00/output.gif" alt="Basic Frame Interpolation Output" width="60%">
 </p>
 
 - [Frame Interpolation Between Two Images](./assets/frame_interpolation/00/basic_first_last_interpolation.json) - This workflow is a basic introduction to blending between two different frames. This will be expanded on heavily but to get everyone started, I am beginning with this basic yet extremely powerful workflow. 
