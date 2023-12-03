@@ -40,7 +40,7 @@ Here is a list of the available workflows:
 ## Frames to Video
 (Perfect for SDXL Turbo Outputs)
 ![Basic SDXL Turbo With Refiner Pass Output](./assets/frames_to_video/00/output.gif)
-- [Basic SDXL Turbo With Refiner Pass](./assets/frames_to_video/00/frames_to_video.json) - This workflow can combine frames from a given directory into a video. I recommneded saving SDXL Turbo outputs to their own directory which can easily be passed into the load images node. There is a node in between loading images and actually combining them: `GMFSS Fortuna VFI` which is an interpolation node. It allows from frames to blend with one another in a smoother fashion. This can be bypassed if the effect is not desired by right clicking the node and selecting `bypass` or just altogether deleting it. There are also other interpolation models that can be used. The custom_node required to set this up can be found here:
+- [Basic SDXL Turbo With Refiner Pass](./assets/frames_to_video/00/frames_to_video.json) - This workflow can combine frames from a given directory into a video. I recommneded saving SDXL Turbo outputs to their own directory which can easily be passed into the load images node. There is a node in between loading images and actually combining them: `GMFSS Fortuna VFI` which is an interpolation node. It allows from frames to blend with one another in a smoother fashion. This can be deleted if the effect is not desired. There are also other interpolation models that can be used. The custom_node required to set this up can be found here:
 
 `https://github.com/Fannovel16/ComfyUI-Frame-Interpolation`
 
