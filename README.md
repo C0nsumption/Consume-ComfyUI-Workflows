@@ -7,6 +7,7 @@ This repository contains a collection of `.json` and `.png` files, each represen
 3. [SDXL Turbo to SD1.5 Refiner](#sdxl-turbo-to-sd15-refiner)
 4. [Frames to Video](#frames-to-video)
 5. [Basic First to Last frame interpolation](#first-to-last-frame-interpolation)
+6. [SDXL Lightning](#sdxl-lightning-basics)
 
 
 ## Getting Started
@@ -73,6 +74,15 @@ For the full list, please reference the original repo.
 </p>
 
 - [Frame Interpolation Between Two Images](./assets/frame_interpolation/00/basic_first_last_interpolation.json) - This workflow is a basic introduction to blending between two different frames. This will be expanded on heavily but to get everyone started, I am beginning with this basic yet extremely powerful workflow. 
+
+
+
+## SDXL Lightning Basics
+<p align="center">
+  <img src="./assets/sdxl-lightning/00/output.gif" alt="Basic Frame Interpolation Output" width="60%">
+</p>
+
+- [SDXL Lightning](./assets/sdxl-lightning/00/) - These workflows will get you up and running with SDXL lightning in ComfyUI. Note: ONLY THE 2, 4, and 8 STEP MODELS WORK IN COMFYUI AT THE MOMENT (Feb 2024)
 
 
 
