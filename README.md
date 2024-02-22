@@ -82,7 +82,10 @@ For the full list, please reference the original repo.
   <img src="./assets/sdxl-lightning/00/output.gif" alt="Basic Frame Interpolation Output" width="60%">
 </p>
 
-- [SDXL Lightning](./assets/sdxl-lightning/00/) - These workflows will get you up and running with SDXL lightning in ComfyUI. Note: ONLY THE 2, 4, and 8 STEP MODELS WORK IN COMFYUI AT THE MOMENT (Feb 2024)
+- [SDXL Lightning](./assets/sdxl-lightning/00/) - These workflows will get you up and running with SDXL lightning in ComfyUI. All workflows currently work in ComfyUI: 1 Step, 2 Step, 4 Step, and 8 Step. 
+<br>
+You can download the models here:<br>
+https://huggingface.co/ByteDance/SDXL-Lightning/tree/main
 
 
 
