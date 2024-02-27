@@ -1,0 +1,488 @@
+{
+  "last_node_id": 76,
+  "last_link_id": 104,
+  "nodes": [
+    {
+      "id": 75,
+      "type": "ModelSamplingContinuousEDM",
+      "pos": [
+        91.97469840795897,
+        430.20513538007816
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 102
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            103
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingContinuousEDM"
+      },
+      "widgets_values": [
+        "edm_playground_v2.5",
+        120,
+        0.002
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 24,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        91.97469840795897,
+        290.20513538007816
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            102
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            100,
+            101
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            50
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "playground/playground-v2.5-1024px-aesthetic.fp16.safetensors"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 27,
+      "type": "CLIPTextEncode",
+      "pos": [
+        490.2311303683595,
+        234.2051506388671
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 100
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            46
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "A woman, looking off into the distance, with brunette hair, her eyes sad and heavy, black and white photography, "
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 28,
+      "type": "CLIPTextEncode",
+      "pos": [
+        490.2311303683595,
+        474.20515063886717
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 101
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            48
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 25,
+      "type": "KSampler",
+      "pos": [
+        978.5130217914065,
+        214.3076878113281
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 103
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 46
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 48
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 49,
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            43
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        628664143997325,
+        "randomize",
+        50,
+        3,
+        "euler",
+        "normal",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 29,
+      "type": "EmptyLatentImage",
+      "pos": [
+        978.5130217914065,
+        514.3076878113284
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            49
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 26,
+      "type": "VAEDecode",
+      "pos": [
+        1420,
+        220
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 43
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            104
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 76,
+      "type": "SaveImage",
+      "pos": [
+        1420,
+        330
+      ],
+      "size": [
+        397.8173848760475,
+        71.26155425319809
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 104
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "Playground"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      43,
+      25,
+      0,
+      26,
+      0,
+      "LATENT"
+    ],
+    [
+      46,
+      27,
+      0,
+      25,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      48,
+      28,
+      0,
+      25,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      49,
+      29,
+      0,
+      25,
+      3,
+      "LATENT"
+    ],
+    [
+      50,
+      24,
+      2,
+      26,
+      1,
+      "VAE"
+    ],
+    [
+      100,
+      24,
+      1,
+      27,
+      0,
+      "CLIP"
+    ],
+    [
+      101,
+      24,
+      1,
+      28,
+      0,
+      "CLIP"
+    ],
+    [
+      102,
+      24,
+      0,
+      75,
+      0,
+      "MODEL"
+    ],
+    [
+      103,
+      75,
+      0,
+      25,
+      0,
+      "MODEL"
+    ],
+    [
+      104,
+      26,
+      0,
+      76,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "out",
+      "bounding": [
+        1376,
+        119,
+        510,
+        583
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Generation Parameters",
+      "bounding": [
+        936,
+        125,
+        397,
+        552
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Prompt",
+      "bounding": [
+        477,
+        125,
+        429,
+        560
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Model Loading",
+      "bounding": [
+        51,
+        185,
+        396,
+        422
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
