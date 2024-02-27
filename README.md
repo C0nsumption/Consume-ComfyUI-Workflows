@@ -95,10 +95,10 @@ https://huggingface.co/ByteDance/SDXL-Lightning/tree/main
   <img src="./assets/playground-v2/00/playgroundv2.png" alt="Basic Frame Interpolation Output" width="60%">
 </p>
 
-- [Playground V2](./assets/playground-v2/00/) - These workflows will get you up and running with SDXL lightning in ComfyUI. All workflows currently work in ComfyUI: 1 Step, 2 Step, 4 Step, and 8 Step. 
+- [Playground V2](./assets/playground-v2/00/) - These workflows will get you up and running with Playground v2 in ComfyUI. Recommended starting settings are CFG of 3 and 50 Steps. 
 <br>
 You can download the models here:<br>
-https://huggingface.co/ByteDance/SDXL-Lightning/tree/main
+https://huggingface.co/playgroundai/playground-v2.5-1024px-aesthetic
 
 
 
