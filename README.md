@@ -8,6 +8,8 @@ This repository contains a collection of `.json` and `.png` files, each represen
 4. [Frames to Video](#frames-to-video)
 5. [Basic First to Last frame interpolation](#first-to-last-frame-interpolation)
 6. [SDXL Lightning](#sdxl-lightning-basics)
+7. [Playground V2](#playground-v2)
+   
 
 
 ## Getting Started
@@ -83,6 +85,17 @@ For the full list, please reference the original repo.
 </p>
 
 - [SDXL Lightning](./assets/sdxl-lightning/00/) - These workflows will get you up and running with SDXL lightning in ComfyUI. All workflows currently work in ComfyUI: 1 Step, 2 Step, 4 Step, and 8 Step. 
+<br>
+You can download the models here:<br>
+https://huggingface.co/ByteDance/SDXL-Lightning/tree/main
+
+## Playground V2
+<p align="center">
+  <img src="./assets/playground-v2/00/output00.png" alt="Basic Frame Interpolation Output" width="60%">
+  <img src="./assets/playground-v2/00/playgroundv2.png" alt="Basic Frame Interpolation Output" width="60%">
+</p>
+
+- [Playground V2](./assets/playground-v2/00/) - These workflows will get you up and running with SDXL lightning in ComfyUI. All workflows currently work in ComfyUI: 1 Step, 2 Step, 4 Step, and 8 Step. 
 <br>
 You can download the models here:<br>
 https://huggingface.co/ByteDance/SDXL-Lightning/tree/main
