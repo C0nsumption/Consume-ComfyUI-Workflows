@@ -97,11 +97,13 @@ https://huggingface.co/ByteDance/SDXL-Lightning/tree/main
 
 - [Playground V2](./assets/playground-v2/00/) - These workflows will get you up and running with Playground v2 in ComfyUI. Recommended starting settings are CFG of 3 and 50 Steps. 
 <br>
-You can download the models here:<br>
+You can download the models here:
+<br>
 https://huggingface.co/playgroundai/playground-v2.5-1024px-aesthetic
+<br>
+<br>
+For the refiner workflow, I'm using this SDXL Finetune:
+<br>
+https://civitai.com/models/283810?modelVersionId=354820
 
-
-
-
-
-
+...but you dont have to use these, you can use your own. 
