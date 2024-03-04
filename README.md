@@ -10,6 +10,7 @@ This repository contains a collection of `.json` and `.png` files, each represen
 6. [SDXL Lightning](#sdxl-lightning-basics)
 7. [Playground V2](#playground-v2)
 8. [Inpainting w/ Differential Diffusion](#differential-diffusion)
+9. [Motion Lora Training w/ Motion Director](#motion-director)
    
 
 
@@ -117,5 +118,17 @@ https://civitai.com/models/283810?modelVersionId=354820
 
 - [Inpainting w/ Differential Diffusion](./assets/differential_diffusion/00/) - These workflows will get you Inpainting with Differential Diffusion. It is built into ComfyUI although there maybe some custom nodes to install. <br>
 Here is a video guide if needed: https://youtu.be/MM-MrHICqrw
+<br>
+
+## Motion Director
+<p align="center">
+  <img src="./assets/motion_director/00/AnimateDiff_00008.gif" alt="Motion Director Output" width="100%">
+</p>
+
+- [Motion Lora Training w/ Motion Director](./assets/motion_director/00/) - This workflow was created by Kijai but I have included it in my repo because it crucial for following allowing with the following video: <br>
+https://youtu.be/dQDJ1ZpKx4U
+<br>
+Motion module v3_sd15_mm.ckpt and its v3_sd15_adapter.ckpt lora can be found here:<br>
+https://huggingface.co/guoyww/animatediff/tree/main
 <br>
 
