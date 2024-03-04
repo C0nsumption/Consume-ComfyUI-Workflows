@@ -9,6 +9,7 @@ This repository contains a collection of `.json` and `.png` files, each represen
 5. [Basic First to Last frame interpolation](#first-to-last-frame-interpolation)
 6. [SDXL Lightning](#sdxl-lightning-basics)
 7. [Playground V2](#playground-v2)
+8. [Inpainting w/ Differential Diffusion](#differential_diffusion)
    
 
 
@@ -81,7 +82,7 @@ For the full list, please reference the original repo.
 
 ## SDXL Lightning Basics
 <p align="center">
-  <img src="./assets/sdxl-lightning/00/output.gif" alt="Basic Frame Interpolation Output" width="60%">
+  <img src="./assets/sdxl-lightning/00/output.gif" alt="SDXL Lightning Output" width="60%">
 </p>
 
 - [SDXL Lightning](./assets/sdxl-lightning/00/) - These workflows will get you up and running with SDXL lightning in ComfyUI. All workflows currently work in ComfyUI: 1 Step, 2 Step, 4 Step, and 8 Step. 
@@ -91,8 +92,8 @@ https://huggingface.co/ByteDance/SDXL-Lightning/tree/main
 
 ## Playground V2
 <p align="center">
-  <img src="./assets/playground-v2/00/output00.png" alt="Basic Frame Interpolation Output" width="60%">
-  <img src="./assets/playground-v2/00/playgroundv2.png" alt="Basic Frame Interpolation Output" width="60%">
+  <img src="./assets/playground-v2/00/output00.png" alt="Playground V2 Output" width="60%">
+  <img src="./assets/playground-v2/00/playgroundv2.png" alt="Playground V2 Workflow" width="60%">
 </p>
 
 - [Playground V2](./assets/playground-v2/00/) - These workflows will get you up and running with Playground v2 in ComfyUI. Recommended starting settings are CFG of 3 and 50 Steps. 
@@ -107,3 +108,14 @@ For the refiner workflow, I'm using this SDXL Finetune:
 https://civitai.com/models/283810?modelVersionId=354820
 
 ...but you dont have to use these, you can use your own. 
+
+## Differential Diffusion
+<p align="center">
+  <img src="./assets/differential _diffusion/00/output00.png" alt="Differential Diffusion Output00" width="50%">
+  <img src="./assets/differential _diffusion/00/output01.png" alt="Differential Diffusion Output01" width="50%">
+</p>
+
+- [Inpainting w/ Differential Diffusion](./assets/differential_diffusion/00/) - These workflows will get you Inpainting with Differential Diffusion. It is built into ComfyUI although there maybe some custom nodes to install. <br>
+Here is a video guide if needed: https://youtu.be/MM-MrHICqrw
+<br>
+
