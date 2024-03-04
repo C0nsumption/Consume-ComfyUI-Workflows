@@ -112,8 +112,8 @@ https://civitai.com/models/283810?modelVersionId=354820
 
 ## Differential Diffusion
 <p align="center">
-  <img src="./assets/differential _diffusion/00/output00.png" alt="Differential Diffusion Output00" width="50%">
-  <img src="./assets/differential _diffusion/00/output01.png" alt="Differential Diffusion Output01" width="50%">
+  <img src="./assets/differential_diffusion/00/output00.png" alt="Differential Diffusion Output00" width="50%">
+  <img src="./assets/differential_diffusion/00/output01.png" alt="Differential Diffusion Output01" width="50%">
 </p>
 
 - [Inpainting w/ Differential Diffusion](./assets/differential_diffusion/00/) - These workflows will get you Inpainting with Differential Diffusion. It is built into ComfyUI although there maybe some custom nodes to install. <br>
