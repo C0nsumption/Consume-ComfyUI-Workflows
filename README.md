@@ -9,7 +9,7 @@ This repository contains a collection of `.json` and `.png` files, each represen
 5. [Basic First to Last frame interpolation](#first-to-last-frame-interpolation)
 6. [SDXL Lightning](#sdxl-lightning-basics)
 7. [Playground V2](#playground-v2)
-8. [Inpainting w/ Differential Diffusion](#differential_diffusion)
+8. [Inpainting w/ Differential Diffusion](#differential-diffusion)
    
 
 
