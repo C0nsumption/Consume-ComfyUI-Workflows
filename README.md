@@ -11,6 +11,7 @@ This repository contains a collection of `.json` and `.png` files, each represen
 7. [Playground V2](#playground-v2)
 8. [Inpainting w/ Differential Diffusion](#differential-diffusion)
 9. [Motion Lora Training w/ Motion Director](#motion-director)
+10. [TripoSR Automatic 3D Asset Creation](#tripo-sr)
    
 
 
@@ -130,5 +131,16 @@ https://youtu.be/dQDJ1ZpKx4U
 <br>
 Motion module v3_sd15_mm.ckpt and its v3_sd15_adapter.ckpt lora can be found here:<br>
 https://huggingface.co/guoyww/animatediff/tree/main
+<br>
+
+## Tripo SR 
+<p align="center">
+  <img src="./assets/tripo_sr/00/output00.gif" alt="TripoSR Output" width="100%">
+</p>
+
+- [TripoSR Automatic 3D Asset Creation](./assets/tripo_sr/00/) - This workflow combines the power of SDXL layer diffusion with TripoSR to allow for the rapid creation of 3D assets. Generation time estimated at around 15 - 30 seconds.
+<br>
+Currently, layered diffusion only works with SDXL, not SDXL lightning. I have not tested turbo. The model used in the workflow file (Juggernaut XL v8) can be downloaded from here: <br>
+https://civitai.com/models/133005?modelVersionId=288982
 <br>
 
