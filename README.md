@@ -119,19 +119,20 @@ https://civitai.com/models/283810?modelVersionId=354820
 ...but you dont have to use these, you can use your own. 
 
 ## Differential Diffusion
-<div style="display: flex; justify-content: center;">
-  <img src="./assets/differential_diffusion/00/output00.jpeg" alt="Differential Diffusion Output00" style="width: 25%; margin-right: 10px;">
-  <img src="./assets/differential_diffusion/00/output02.png" alt="Differential Diffusion Output01" style="width: 25%;">
-</div>
-<div style="display: flex; justify-content: center;">
-  <img src="./assets/differential_diffusion/00/workflow.gif" alt="Differential Diffusion Output01" style="width: 50%;">
-</div>
+
+<p align="center">
+  <img src="./assets/differential_diffusion/00/output00.jpeg" alt="Differential Diffusion Output00" width="25%" style="margin-right: 10px;">
+  <img src="./assets/differential_diffusion/00/output02.png" alt="Differential Diffusion Output01" width="25%">
+</p>
+<p align="center">
+  <img src="./assets/differential_diffusion/00/workflow.gif" alt="Differential Diffusion Workflow" width="50%">
+</p>
+
+<p><a href="./assets/differential_diffusion/00/workflow.gif">Inpainting w/ Differential Diffusion</a> - These workflows will get you Inpainting with Differential Diffusion. It is built into ComfyUI although there may be some custom nodes to install.</p>
+
+<p>Here is a video guide if needed: <s><a href="https://youtu.be/MM_MrIHCqmw">https://youtu.be/MM_MrIHCqmw</a></s> This video is deprecated and will be updated soon.</p>
 
 
-
-- [Inpainting w/ Differential Diffusion](./assets/differential_diffusion/00/) - These workflows will get you Inpainting with Differential Diffusion. It is built into ComfyUI although there maybe some custom nodes to install. <br>
-
-Here is a video guide if needed:<s> https://youtu.be/MM-MrHICqrw </s> This video is deprecated and will be updated soon.
 <br>
 
 ## Motion Director
