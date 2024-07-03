@@ -52,22 +52,29 @@ Here is a list of the available workflows:
 
 - [Frames to Video](./assets/frames_to_video/00/frames_to_video.json) - This workflow can combine frames from a given directory into a video. I recommneded saving SDXL Turbo outputs to their own directory which can easily be passed into the load images node. There is a node in between loading images and actually combining them: `GMFSS Fortuna VFI` which is an interpolation node. It allows from frames to blend with one another in a smoother fashion. This can be deleted if the effect is not desired. There are also other interpolation models that can be used. The custom_node required to set this up can be found here:
 
-`https://github.com/Fannovel16/ComfyUI-Frame-Interpolation`
+<details>
+  <summary> Installation and Interpolation Methods</summary>
+  <p>
+    <a href="https://github.com/Fannovel16/ComfyUI-Frame-Interpolation">https://github.com/Fannovel16/ComfyUI-Frame-Interpolation</a>
+  </p>
+  <p>It can be installed through the ComfyUI manager.</p>
+  <ul>
+    <li>You may need to head into the directory for it and run the <code>install.bat</code> file for Windows.</li>
+    <li>For Linux users, you may have to navigate to the custom nodes directory via terminal with your venv activated and run: <code>python install.py</code></li>
+  </ul>
+  <p>Note: Ensure you reference the repo at <a href="https://github.com/Fannovel16/ComfyUI-Frame-Interpolation">https://github.com/Fannovel16/ComfyUI-Frame-Interpolation</a> for proper installation instructions.</p>
+  <p>Here's a list of some of the interpolation methods that can be used (search their name in Comfy to easily find the node):</p>
+  <ul>
+    <li>GMFSS Fortuna VFI</li>
+    <li>IFRNet VFI</li>
+    <li>IFUnet VFI</li>
+    <li>M2M VFI</li>
+    <li>RIFE VFI (4.0 - 4.7) (Note that option fast_mode won't do anything from v4.5+ as contextnet is removed)</li>
+    <li>FILM VFI</li>
+  </ul>
+  <p>For the full list, please reference the original repo.</p>
+</details>
 
-It can be installed through the ComfyUI manager. 
-- You may need to head into the directory for it and run the `install.bat` file for windows.
-- For linux user's, you may have to navigate to the custom nodes directory via terminal with your venv activated and run: `python install.py`
-- Note: Ensure you reference the repo at `https://github.com/Fannovel16/ComfyUI-Frame-Interpolation` for proper installation instructions. 
-
-Here's a list of some of the interpolations methods that can be used (search their name in Comfy to easily find the node):
-- GMFSS Fortuna VFI
-- IFRNet VFI
-- IFUnet VFI
-- M2M VFI
-- RIFE VFI (4.0 - 4.7) (Note that option fast_mode won't do anything from v4.5+ as contextnet is removed)
-- FILM VFI
-
-For the full list, please reference the original repo. 
 
 <br>
 <br>
@@ -112,13 +119,19 @@ https://civitai.com/models/283810?modelVersionId=354820
 ...but you dont have to use these, you can use your own. 
 
 ## Differential Diffusion
-<p align="center">
-  <img src="./assets/differential_diffusion/00/output00.png" alt="Differential Diffusion Output00" width="50%">
-  <img src="./assets/differential_diffusion/00/output01.png" alt="Differential Diffusion Output01" width="50%">
-</p>
+<div style="display: flex; justify-content: center;">
+  <img src="./assets/differential_diffusion/00/output00.jpeg" alt="Differential Diffusion Output00" style="width: 25%; margin-right: 10px;">
+  <img src="./assets/differential_diffusion/00/output02.png" alt="Differential Diffusion Output01" style="width: 25%;">
+</div>
+<div style="display: flex; justify-content: center;">
+  <img src="./assets/differential_diffusion/00/workflow.gif" alt="Differential Diffusion Output01" style="width: 50%;">
+</div>
+
+
 
 - [Inpainting w/ Differential Diffusion](./assets/differential_diffusion/00/) - These workflows will get you Inpainting with Differential Diffusion. It is built into ComfyUI although there maybe some custom nodes to install. <br>
-Here is a video guide if needed: https://youtu.be/MM-MrHICqrw
+
+Here is a video guide if needed:<s> https://youtu.be/MM-MrHICqrw </s> This video is deprecated and will be updated soon.
 <br>
 
 ## Motion Director

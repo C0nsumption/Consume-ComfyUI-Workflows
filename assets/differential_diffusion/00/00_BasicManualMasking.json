@@ -1,0 +1,608 @@
+{
+  "last_node_id": 52,
+  "last_link_id": 75,
+  "nodes": [
+    {
+      "id": 12,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1144.21628548739,
+        288.6904327142821
+      ],
+      "size": {
+        "0": 223.33572387695312,
+        "1": 107.05976104736328
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 67,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            12
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "beautiful portrait close up of Caucasian woman"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 50,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1140.21628548739,
+        446.6904327142821
+      ],
+      "size": {
+        "0": 235.0350341796875,
+        "1": 105.15975189208984
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            66
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 17,
+      "type": "DifferentialDiffusion",
+      "pos": [
+        1395.21628548739,
+        135.69043271428217
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 72,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            74
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DifferentialDiffusion"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 10,
+      "type": "InpaintModelConditioning",
+      "pos": [
+        1396.21628548739,
+        174.69043271428217
+      ],
+      "size": {
+        "0": 216.59999084472656,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 12
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 66,
+          "slot_index": 1
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 69
+        },
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 75
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 73
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            15
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            16
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            33
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InpaintModelConditioning"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 25,
+      "type": "VAEDecode",
+      "pos": [
+        2199.097510614624,
+        102
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 31
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 71,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            55
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 16,
+      "type": "KSampler",
+      "pos": [
+        1396.484291779785,
+        231.22632322875944
+      ],
+      "size": {
+        "0": 312.5008239746094,
+        "1": 390.84954833984375
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 74,
+          "slot_index": 0
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 15
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 16
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            31
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        268597414251157,
+        "randomize",
+        4,
+        2,
+        "dpmpp_sde",
+        "karras",
+        0.55
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 51,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        1141.484291779785,
+        128.22632322875944
+      ],
+      "size": {
+        "0": 238.06082153320312,
+        "1": 114.0695571899414
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            72
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            67,
+            68
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            69,
+            71
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "hyper\\Juggernaut_X_RunDiffusion_Hyper.safetensors"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 49,
+      "type": "LoadImage",
+      "pos": [
+        1758,
+        135
+      ],
+      "size": {
+        "0": 305.82611083984375,
+        "1": 516.072021484375
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            75
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            73
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "clipspace/clipspace-mask-291676.39999997616.png [input]",
+        "image"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "SaveImage",
+      "pos": [
+        2104,
+        158
+      ],
+      "size": {
+        "0": 292.82611083984375,
+        "1": 514.072021484375
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 55
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    }
+  ],
+  "links": [
+    [
+      12,
+      12,
+      0,
+      10,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      15,
+      10,
+      0,
+      16,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      16,
+      10,
+      1,
+      16,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      31,
+      16,
+      0,
+      25,
+      0,
+      "LATENT"
+    ],
+    [
+      33,
+      10,
+      2,
+      16,
+      3,
+      "LATENT"
+    ],
+    [
+      55,
+      25,
+      0,
+      40,
+      0,
+      "IMAGE"
+    ],
+    [
+      66,
+      50,
+      0,
+      10,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      67,
+      51,
+      1,
+      12,
+      0,
+      "CLIP"
+    ],
+    [
+      68,
+      51,
+      1,
+      50,
+      0,
+      "CLIP"
+    ],
+    [
+      69,
+      51,
+      2,
+      10,
+      2,
+      "VAE"
+    ],
+    [
+      71,
+      51,
+      2,
+      25,
+      1,
+      "VAE"
+    ],
+    [
+      72,
+      51,
+      0,
+      17,
+      0,
+      "MODEL"
+    ],
+    [
+      73,
+      49,
+      1,
+      10,
+      4,
+      "MASK"
+    ],
+    [
+      74,
+      17,
+      0,
+      16,
+      0,
+      "MODEL"
+    ],
+    [
+      75,
+      49,
+      0,
+      10,
+      3,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Setup",
+      "bounding": [
+        1746,
+        47,
+        643,
+        621
+      ],
+      "color": "#444",
+      "font_size": 24
+    },
+    {
+      "title": "Differential Diffusion Inpainting",
+      "bounding": [
+        1123,
+        48,
+        615,
+        611
+      ],
+      "color": "#444",
+      "font_size": 24
+    },
+    {
+      "title": "Differential Diffusion Inpainting",
+      "bounding": [
+        1125,
+        48,
+        615,
+        613
+      ],
+      "color": "#b58b2a",
+      "font_size": 24
+    }
+  ],
+  "config": {},
+  "extra": {
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ],
+    "ds": {
+      "scale": 1.3310000000000006,
+      "offset": {
+        "0": -802.1614379882812,
+        "1": 137.80686950683594
+      }
+    }
+  },
+  "version": 0.4
+}
